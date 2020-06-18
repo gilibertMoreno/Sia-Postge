@@ -18,5 +18,15 @@ public class IndexController {
 		return"logincord";
 	}
 	
+	@GetMapping("/logest")
+	public String loginEstudiante() {
+		return"loginestud";
+	}
+	
+	@GetMapping("/logprof")
+	public String loginProfesor() {
+		return"loginprof";
+	}
+	
 
 }
