@@ -79,12 +79,12 @@
 			<div class="content-error">
 				<div class="hpanel">
 					<div class="panel-body">
-						<form action="#" id="loginForm">
+						<form action="#" id="loginForm" method="post" th:action="@{/login_profesor}">
 							<div class="form-group">
 								<label class="control-label" for="username">NOMBRE DE
 									USUARIOS</label> <input type="text" placeholder="example@gmail.com"
 									title="Please enter you username" required="" value=""
-									name="username" id="username" class="form-control"> <span
+									name="codigo" id="username" class="form-control"> <span
 									class="help-block small">Tu nombre de usuario único para
 									la aplicación</span>
 							</div>
@@ -110,7 +110,7 @@
 						<!-- all for your comfort blocks -->
 						<div class="row login-links">
 							<div class="col-md-3 col-sm-3 col-xs-3">
-								<a th:href="@{/coordinador/logprof}" data-toggle="tooltip"
+								<a th:href="@{/login_profesor}" data-toggle="tooltip"
 									data-placement="bottom" title="" data-original-title="Docente"
 									style="margin-left: 19px;">
 									<div class="text-center">
@@ -119,7 +119,7 @@
 								</a>
 							</div>
 							<div class="col-md-3 col-sm-3 col-xs-3">
-								<a class=" " th:href="@{/coordinador/logest}"
+								<a class=" " th:href="@{/login_estudiante}"
 									data-toggle="tooltip" data-placement="bottom" title=""
 									data-original-title="PLAD" style="margin-left: 36px;">
 									<div class="text-center">
@@ -128,7 +128,7 @@
 								</a>
 							</div>
 							<div class="col-md-3 col-sm-3 col-xs-3">
-								<a th:href="@{/coordinador/logcor}" data-toggle="tooltip"
+								<a th:href="@{/login_coordinador}" data-toggle="tooltip"
 									data-placement="bottom" title=""
 									data-original-title="Jefe de Plan" style="margin-left: 50px;">
 									<div class="text-center">

@@ -2,28 +2,26 @@ package com.springboot.app.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping ("/coordinador")
 public class IndexController {
 	
-	@GetMapping("/")
+	@GetMapping({"/",""})
 	public String index() {
-		return "coordinador/index";
+		return "loginestud";
 	}
 	
-	@GetMapping("/logcor")
+	@GetMapping("/login_coordinador")
 	public String loginCoordinador() {
 		return"logincord";
 	}
 	
-	@GetMapping("/logest")
+	@GetMapping("/login_estudiante")
 	public String loginEstudiante() {
 		return"loginestud";
 	}
 	
-	@GetMapping("/logprof")
+	@GetMapping("/login_profesor")
 	public String loginProfesor() {
 		return"loginprof";
 	}
