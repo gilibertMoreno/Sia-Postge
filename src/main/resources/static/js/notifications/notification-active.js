@@ -333,7 +333,9 @@
             });
 			$('#basicSuccess').on('click', function () {
                 Lobibox.notify('success', {
-                    msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
+                    title: 'Éxito',
+                    msg: 'Se ha completado la acción con éxito'
+                    
                 });
             });
 			

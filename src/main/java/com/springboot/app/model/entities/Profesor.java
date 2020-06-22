@@ -47,9 +47,11 @@ public class Profesor {
 	
 	@Column(name="correo")
 	public String correo;
+
 	
 	@ManyToOne
 	@JoinColumn(name="idPostGrado")
 	public Postgrado postgrado;
 	
+
 }

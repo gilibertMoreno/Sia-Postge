@@ -278,3 +278,33 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+/****MODIFICACIONES****/
+.main-logo{
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info-persona{
+    background: #dd4b39!important;
+    color: white;
+    text-align: center!important;
+}
+
+
+.info-persona-nombre{
+   font-size: 17px;
+}
+
+.menu-superior{
+     background: #dd4b39!important;
+}
+
+.banner-info!important{
+    color: red;
+}
+
+.btn-add-mat!important{
+    text-align: right;
+}
