@@ -33,7 +33,7 @@ $(function() {
 		events: [
 			{
 				title: 'All Day Event',
-				start: YM + '-01',
+				start: YM + '-02',
 				color: '#006DF0'
 			},
 			{
