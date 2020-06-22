@@ -1,7 +1,6 @@
 package com.springboot.app.service;
 
-import java.util.ArrayList;
-import com.springboot.app.model.entities.Coordinador;
+
 
 public interface ILoginService {
 	

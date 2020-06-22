@@ -14,38 +14,30 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 
 @Entity
-@Table(name="materia")
-public class Materia {
-	
+@Table(name="estudiantespostgrado")
+public class EstudiantePostgrado {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="idmateria")
-	public int id;
+	@Column(name="idestudiantespostgrado")
+	public String id;
 	
-	@Column(name="codigo")
-	public String codigo;
+	@Column(name="fechainicio")
+	public String fechainicio;
 	
-	@Column(name="nombre")
-	public String nombre;
-	
-	@Column(name="descripcion")
-	public String descripcion;
-	
-	@Column(name="semestre")
-	public String semestre;
-	
-	@Column(name="creditos")
-	public int creditos;
+	@Column(name="fechafin")
+	public String fechafin;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="idpensum")
-    public Pensum pensum;
-
+	@JoinColumn(name="idPostGrado")
+	public Postgrado PostGrado;
+	@ManyToOne(fetch =FetchType.LAZY)
+	@JoinColumn(name="idEstudiante")
+	public Estudiante estudiante;
+	
 }

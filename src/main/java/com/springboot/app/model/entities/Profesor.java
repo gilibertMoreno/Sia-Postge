@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -24,21 +26,30 @@ public class Profesor {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="idprofesor")
 	public Integer id;
+	
 	@Column(name="documento")
 	public String documento;
+	
 	@Column(name="nombre")
 	public String nombre;
+	
 	@Column(name="direccion")
 	public String direccion;
+	
 	@Column(name="datosprofesionales")
 	public String datosprofesionales;
+	
 	@Column(name="codigo")
 	public String codigo;
+	
 	@Column(name="password")
 	public String password;
+	
 	@Column(name="correo")
 	public String correo;
-	//@Column(name="PostGrado_idPostGrado")
-	//public int PostGrado_idPostGrado;
+	
+	@ManyToOne
+	@JoinColumn(name="idPostGrado")
+	public Postgrado postgrado;
 	
 }

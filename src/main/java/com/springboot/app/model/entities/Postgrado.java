@@ -2,9 +2,12 @@ package com.springboot.app.model.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -24,20 +27,27 @@ public class Postgrado {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="idPostGrado")
 	public Integer id;
+	
 	@Column(name="nombre")
 	public String nombre;
+	
 	@Column(name="descripcion")
 	public String descripcion;
+	
 	@Column(name="fechainicio")
 	public String fechainicio;
+	
 	@Column(name="fechafin")
 	public String fechafin;
+	
 	@Column(name="requisitos")
 	public String requisitos;
+	
 	@Column(name="codigo")
 	public String codigo;
 	
-	//@Column(name="iddirector")
-	//public String director;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="iddirector")
+	public Coordinador director;
 
 }
